@@ -1,0 +1,2287 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     93058,       2279]
+NotebookOptionsPosition[     60258,       1635]
+NotebookOutlinePosition[     86560,       2194]
+CellTagsIndexPosition[     86517,       2191]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Effect of Geomagnetic Reversal on Cosmic Ray Penetration in the Atmosphere as \
+a Cause of Mass Extinctions\
+\>", "Title",
+ CellChangeTimes->{{3.700774153171832*^9, 3.700774159196458*^9}, {
+  3.739289553395977*^9, 3.7392895541048613`*^9}, {3.739386041507971*^9, 
+  3.739386071784614*^9}, {3.739388461166972*^9, 3.739388472436256*^9}, {
+  3.739490625830113*^9, 
+  3.739490639839909*^9}},ExpressionUUID->"a4cacc26-ba4c-40df-8781-\
+0c45e8e1e19d"],
+
+Cell["\<\
+Mass Extinctions are strongly correlated with periods of geomagnetic \
+reversal. It is unclear, however, which of the atmospheric changes caused by \
+geomagnetic reversal are responsible for this. This essay evaluates the \
+effect of cosmic ray penetration in a collapsing magnetic field, and thus the \
+extent to which an increase in caners would pose a significant threat to \
+life. \
+\>", "Abstract",
+ CellChangeTimes->{{3.700774172671139*^9, 3.700774220850109*^9}, {
+   3.700778895632181*^9, 3.700778896308676*^9}, {3.7266003177433*^9, 
+   3.7266003256952*^9}, {3.7271982802228937`*^9, 3.7271982804836206`*^9}, {
+   3.739386086638854*^9, 3.739386209494789*^9}, {3.7393862586095*^9, 
+   3.7393862813488607`*^9}, {3.739386326388588*^9, 3.739386351162879*^9}, {
+   3.739386453447673*^9, 3.739386454363119*^9}, {3.739386529003497*^9, 
+   3.739386612941407*^9}, {3.739386646055643*^9, 3.739386674037101*^9}, {
+   3.739386953215538*^9, 3.7393869696746187`*^9}, {3.739388062222034*^9, 
+   3.7393881510797453`*^9}, {3.73938819597965*^9, 3.739388289115892*^9}, {
+   3.739388322217511*^9, 3.7393883669042664`*^9}, {3.739388495007215*^9, 
+   3.739388495481063*^9}, {3.739388734051299*^9, 3.739388763334971*^9}, {
+   3.7393888108967953`*^9, 3.7393888250914907`*^9}, {3.739388858987154*^9, 
+   3.739388873634297*^9}, 3.739388927724708*^9, {3.739389089316093*^9, 
+   3.739389121936561*^9}, {3.739389216840859*^9, 3.739389233683811*^9}, {
+   3.739389264040325*^9, 3.739389360030182*^9}, {3.7393895399527903`*^9, 
+   3.739389569384956*^9}},ExpressionUUID->"35286f5c-c0ae-405f-a831-\
+0b12de81f56c"],
+
+Cell[TextData[StyleBox["June 30, 2018\[LongDash]Noah Hardwicke",
+ FontSize->17,
+ FontWeight->"SemiBold",
+ FontSlant->"Plain"]], "AuthorshipIntro",
+ CellChangeTimes->{
+  3.7271982813872833`*^9, {3.7393883739348497`*^9, 
+   3.739388388530952*^9}},ExpressionUUID->"96e008f1-3bea-4d8e-84cb-\
+f037cd68dd46"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{
+  3.716825484342502*^9, {3.739492089497121*^9, 
+   3.7394920935233097`*^9}},ExpressionUUID->"575e87a4-4d3b-491a-b9c7-\
+5dde22d2425a"],
+
+Cell[TextData[{
+ "The frequency of geomagnetic reversals fluctuates significantly, but the \
+time taken for field collapse and reformation is more consistent, usually \
+between 1000 and 10 000 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"years", 
+    SuperscriptBox[".", "1"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "74899fd8-7cb1-4f3b-a57e-3b7ed6a2552c"],
+ " During this time the Earth\[CloseCurlyQuote]s dipole field collapses into \
+a Mars-like quadrupole system with a ~90% decrease in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"strength", 
+    SuperscriptBox[".", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "48f15768-f174-4745-a692-28a2785b39f3"],
+ " Many effects, including mass extinction, correlate with geomagnetic \
+reversal, but the causal chain of effects that lead from magnetic field \
+collapse to mass extinction is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"unknown", 
+    SuperscriptBox[".", "3"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4caf88b9-3520-4d10-8e40-737c5629e8bb"],
+ " Perhaps the immediate causal link one might draw is the increase in \
+cancers due to the solar wind and cosmic ray flux increase at the Earth\
+\[CloseCurlyQuote]s surface. Evaluating this conjecture requires a \
+consideration of the magnetic field evolution during reversal."
+}], "Text",
+ CellChangeTimes->{{3.700774312865305*^9, 3.700774350341485*^9}, 
+   3.739386895089974*^9, {3.739388609710908*^9, 3.739388627240336*^9}, {
+   3.73938867644895*^9, 3.739388692497059*^9}, {3.739389585121786*^9, 
+   3.739389606305667*^9}, {3.739389786516165*^9, 3.739389838222781*^9}, {
+   3.7393898790549088`*^9, 3.739389905707453*^9}, {3.73939001352847*^9, 
+   3.739390069895335*^9}, {3.7393901137624817`*^9, 3.7393901559466248`*^9}, {
+   3.739390203181991*^9, 3.739390222971974*^9}, {3.7393902714351254`*^9, 
+   3.739390284567717*^9}, {3.739390394837174*^9, 3.739390437614485*^9}, {
+   3.7393905017157097`*^9, 3.739390526432407*^9}, {3.739390600080586*^9, 
+   3.739390776005315*^9}, {3.739391050918956*^9, 3.739391051605686*^9}, {
+   3.739391112865993*^9, 3.739391115408764*^9}, {3.739391150961709*^9, 
+   3.739391191396414*^9}, {3.739391349892612*^9, 3.739391354417453*^9}, {
+   3.739391455219348*^9, 3.7393914560226183`*^9}, {3.73939149191881*^9, 
+   3.7393914931952*^9}, {3.739396146451676*^9, 3.739396179500327*^9}, {
+   3.739396229161106*^9, 3.739396249129889*^9}, {3.7393962990731077`*^9, 
+   3.739396353507003*^9}, {3.739396388419798*^9, 3.7393964106507883`*^9}, {
+   3.739396681402533*^9, 3.7393967376900187`*^9}, {3.7393967947891006`*^9, 
+   3.739396846890897*^9}, {3.7393968933004293`*^9, 3.739396980443397*^9}, {
+   3.739399198662386*^9, 3.7393992183676233`*^9}, {3.7394052459691267`*^9, 
+   3.7394052870595837`*^9}, {3.739405388526527*^9, 3.739405411583392*^9}, {
+   3.739405815623527*^9, 3.739405825150056*^9}, {3.739405856198326*^9, 
+   3.739405856517058*^9}, {3.739405930647276*^9, 3.739406034600977*^9}, {
+   3.7394061563634167`*^9, 3.739406248189434*^9}, {3.739438429669895*^9, 
+   3.73943849358237*^9}, {3.7394762492854443`*^9, 3.739476263632022*^9}, {
+   3.7394763921156483`*^9, 3.739476393887155*^9}, {3.739490692032041*^9, 
+   3.739490708689892*^9}, {3.739491995400566*^9, 
+   3.739491996427108*^9}},ExpressionUUID->"39b14f0a-8481-40b0-9223-\
+104f0edeefaa"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Geomagnetic Field Evolution During Reversal", \
+"Section"]], "Subsection",
+ CellChangeTimes->{{3.739492019193117*^9, 
+  3.739492041511352*^9}},ExpressionUUID->"5fcf0f8d-00b3-499e-b52b-\
+4fae79db6a1d"],
+
+Cell[TextData[{
+ "When the Earth\[CloseCurlyQuote]s magnetic field is stable, it can be well \
+approximated as a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"dipole", 
+    SuperscriptBox[".", "4"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0e1f8d3c-781c-47bb-a9cc-898c0160e0c3"]
+}], "Text",
+ CellChangeTimes->{
+  3.739492001832453*^9},ExpressionUUID->"fef50c01-f205-488a-9510-\
+4bc711d7fc2c"],
+
+Cell[TextData[{
+ "The dipole magnetic flux can be defined as a sink and a source separated by \
+some distance ",
+ StyleBox["d ",
+  FontSlant->"Italic"],
+ "in the ",
+ StyleBox["y ",
+  FontSlant->"Italic"],
+ "plane. To simplify the model for visualisation, only two spacial dimensions \
+",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["y ",
+  FontSlant->"Italic"],
+ "are considered."
+}], "CodeText",
+ CellChangeTimes->{{3.700774271565714*^9, 3.70077428101515*^9}, {
+   3.73947626687642*^9, 3.739476297654833*^9}, 3.739476407878744*^9, {
+   3.7394766192254257`*^9, 
+   3.7394766854507504`*^9}},ExpressionUUID->"32b4c4dc-868f-47a3-8305-\
+4254f9f9edd9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dipolefluxX", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dipolefluxY", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox[
+      RowBox[{"y", "-", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox[
+      RowBox[{"y", "+", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.700774255707568*^9, 3.70077426783818*^9}, {
+   3.739476416928451*^9, 3.739476423596595*^9}, 3.739476468628316*^9, {
+   3.739476502519615*^9, 3.7394766072290487`*^9}, {3.7394767189693623`*^9, 
+   3.739476734192741*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"037e89e3-4212-4e7b-9c4f-98c97dcc6ef2"],
+
+Cell[TextData[{
+ "The Earth\[CloseCurlyQuote]s magnetic field is distorted by the solar wind, \
+so taking the ",
+ StyleBox["x ",
+  FontSlant->"Italic"],
+ "direction to be that pointing away from the Sun, the distortion is simply \
+modeled by adding a constant flux component in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", 
+    SuperscriptBox[".", "5"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ea08b9c5-fefd-4019-8fae-bda895100ab2"]
+}], "Text",
+ CellChangeTimes->{{3.700774370934465*^9, 3.700774423028035*^9}, {
+  3.739476769722262*^9, 3.739476787465673*^9}, {3.739477245312693*^9, 
+  3.7394773024243593`*^9}, {3.7394782656140203`*^9, 3.7394782673373938`*^9}, {
+  3.739490758219273*^9, 
+  3.739490769330991*^9}},ExpressionUUID->"c7524cb0-157b-4ba7-9e88-\
+129b2c6177b6"],
+
+Cell[TextData[{
+ "Redefine ",
+ StyleBox["dipolefluxX ",
+  FontSlant->"Italic"],
+ "to account for the solar wind by adding a constant term. The expression \
+multiplying the constant is to ensure correct distortion of the field \
+regardless of flux direction."
+}], "CodeText",
+ CellChangeTimes->{{3.700774301937366*^9, 3.700774308664962*^9}, {
+  3.700774357721336*^9, 3.700774365046776*^9}, {3.70077442733965*^9, 
+  3.70077443419691*^9}, {3.7394778359053392`*^9, 3.739477854373693*^9}, {
+  3.739477909565943*^9, 
+  3.7394780187144403`*^9}},ExpressionUUID->"88190f80-bcae-474f-a2c9-\
+72032c353077"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"dipolefluxX", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "+", 
+    RowBox[{".02", 
+     RowBox[{"y", "/", 
+      RowBox[{"Abs", "@", "y"}]}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.739477857750042*^9, 3.7394778963882427`*^9}, {
+  3.739478034952487*^9, 3.7394780436404543`*^9}, {3.739478233119883*^9, 
+  3.739478235386685*^9}},
+ CellLabel->"In[87]:=",ExpressionUUID->"5bf69509-f1c0-41a9-aef8-ef5781232056"],
+
+Cell[TextData[{
+ "During geomagnetic reversal, the dipole field collapses into a quadrupole \
+with roughly a 90% decrease in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"strength", 
+    SuperscriptBox[".", "6"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ccd66b29-eb82-4661-9155-3d5c2116f443"]
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+   3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+   3.739481891311452*^9}, 
+   3.7394907940411253`*^9},ExpressionUUID->"a77b9374-4462-4742-910a-\
+57dea5c94829"],
+
+Cell[TextData[{
+ "Define ",
+ StyleBox["quadrupoleflux ",
+  FontSlant->"Italic"],
+ "as the system of two sinks and two sources aligned with the geographic \
+poles and equator, again accounting for the field distortion by solar wind."
+}], "CodeText",
+ CellChangeTimes->{{3.700774528132448*^9, 3.700774537078189*^9}, {
+  3.7394819294161987`*^9, 3.739482022691401*^9}, {3.739482107171371*^9, 
+  3.7394821266697683`*^9}},ExpressionUUID->"9347f396-aa44-4e36-bd34-\
+e1bf27a80687"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"quadrupolefluxX", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "+", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+       SuperscriptBox["y", "2."]}]], 
+     FractionBox[
+      RowBox[{"x", "-", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"x", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+        SuperscriptBox["y", "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+       SuperscriptBox["y", "2."]}]], 
+     FractionBox[
+      RowBox[{"x", "+", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+        SuperscriptBox["y", "2."]}]]]}], "+", ".02"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"quadrupolefluxY", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox[
+      RowBox[{"y", "-", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "+", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox["x", "2."], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"y", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]], 
+     FractionBox[
+      RowBox[{"y", "+", 
+       RowBox[{"d", "/", "2."}]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2."], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"y", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+       SuperscriptBox["y", "2."]}]], 
+     FractionBox["y", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"x", "-", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+        SuperscriptBox["y", "2."]}]]]}], "-", 
+    RowBox[{
+     FractionBox["1.", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "+", 
+          RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+       SuperscriptBox["y", "2."]}]], 
+     FractionBox["y", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{"d", "/", "2."}]}], ")"}], "2."], "+", 
+        SuperscriptBox["y", "2."]}]]]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7007744992034283`*^9, 3.700774500862144*^9}, {
+   3.7394820703157578`*^9, 3.739482160984804*^9}, 3.739490987649481*^9},
+ CellLabel->
+  "In[120]:=",ExpressionUUID->"6cb4f173-1f72-4596-85af-1b9650c8c838"],
+
+Cell[TextData[{
+ "In order to visualise the geomagnetic field evolution during reversal, a \
+simple model is used where ",
+ StyleBox["rev ",
+  FontSlant->"Italic"],
+ "denotes reversal progression, such that the dipole field reduces linearly \
+with ",
+ StyleBox["rev",
+  FontSlant->"Italic"],
+ " and the quadrupole field increases linearly with ",
+ StyleBox["rev ",
+  FontSlant->"Italic"],
+ "until it reaches 10% the strength of the dipole field."
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.7394908472202473`*^9, 
+  3.739490849706237*^9}},ExpressionUUID->"277d3cb2-723a-4bec-b50a-\
+109cb8b0a1ec"],
+
+Cell[TextData[{
+ "Define ",
+ StyleBox["field ",
+  FontSlant->"Italic"],
+ "as the geomagnetic field as a function of ",
+ StyleBox["rev",
+  FontSlant->"Italic"],
+ "."
+}], "CodeText",
+ CellChangeTimes->{{3.700774554822753*^9, 3.700774560088324*^9}, {
+  3.739482481648582*^9, 
+  3.7394825230435343`*^9}},ExpressionUUID->"6e6ff036-d0d5-4252-b82e-\
+487b6b103e94"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"field", "[", 
+    RowBox[{"x_", ",", "y_", ",", "d_", ",", "rev_"}], "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1.", "-", "rev"}], ")"}], 
+       RowBox[{"dipolefluxX", "[", 
+        RowBox[{"x", ",", "y", ",", "d"}], "]"}]}], "+", 
+      RowBox[{"0.1", "rev", " ", 
+       RowBox[{"quadrupolefluxX", "[", 
+        RowBox[{"x", ",", "y", ",", "d"}], "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1.", "-", "rev"}], ")"}], 
+       RowBox[{"dipolefluxY", "[", 
+        RowBox[{"x", ",", "y", ",", "d"}], "]"}]}], "+", 
+      RowBox[{"0.1", "rev", " ", 
+       RowBox[{"quadrupolefluxY", "[", 
+        RowBox[{"x", ",", "y", ",", "d"}], "]"}]}]}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7007745422247057`*^9, 3.700774551047546*^9}, {
+  3.739482529076716*^9, 3.739482688819254*^9}},
+ CellLabel->
+  "In[122]:=",ExpressionUUID->"2d53fc2d-d76c-4c8d-ad4a-71f6f2f7e455"],
+
+Cell[TextData[{
+ "The following ",
+ StyleBox["Manipulate",
+  FontSlant->"Italic"],
+ " models the evolution of the geomagnetic field with ",
+ StyleBox["rev",
+  FontSlant->"Italic"],
+ ". For the majority of the evolution, the dipole field is dominant even as \
+it decreases in strength."
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.7394908745444593`*^9, 
+  3.739490878137636*^9}},ExpressionUUID->"4e4dea66-e0b7-4384-a44d-\
+9e5f9fbd6956"],
+
+Cell["\<\
+The evolution of the geomagnetic field from dipole to quadrupole during \
+reversal. Plot indicates paths of particles following the magnetic field.\
+\>", "CodeText",
+ CellChangeTimes->{{3.70077457364149*^9, 3.700774581561459*^9}, {
+  3.739482890478307*^9, 3.739482910001223*^9}, {3.739484039076189*^9, 
+  3.739484047195385*^9}, {3.739484195746231*^9, 3.7394842169631433`*^9}, {
+  3.739491026689171*^9, 
+  3.739491082232369*^9}},ExpressionUUID->"75572af2-bcb1-4ca7-a26b-\
+e07262ec8880"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"StreamPlot", "[", 
+    RowBox[{
+     RowBox[{"Clip", "[", 
+      RowBox[{
+       RowBox[{"field", "[", 
+        RowBox[{"x", ",", "y", ",", "2", ",", "rev"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1."}], ",", "1."}], "}"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5."}], ",", "10."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "5."}], ",", "5."}], "}"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "None"}], ",", 
+     RowBox[{"AspectRatio", "\[Rule]", "0.5"}], ",", 
+     RowBox[{"StreamPoints", "\[Rule]", "Fine"}], ",", 
+     RowBox[{"StreamMarkers", "\[Rule]", "\"\<PinDart\>\""}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "rev", ",", "0.", ",", 
+       "\"\<Reversal \!\(\*StyleBox[\"rev\",FontSlant->\"Italic\"]\)\>\""}], 
+      "}"}], ",", "0.", ",", "1."}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7007745422247057`*^9, 3.70077456904123*^9}, {
+  3.739484031226407*^9, 3.739484185247678*^9}, {3.739484232776572*^9, 
+  3.7394843247063437`*^9}, {3.7394844086183023`*^9, 3.7394844603547697`*^9}, {
+  3.7394855590385237`*^9, 3.739485561049158*^9}, {3.73948559465162*^9, 
+  3.739485595602272*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"5637b20e-b6eb-4cbb-93c6-0b78649f8c96"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`rev$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`rev$$], 0., 
+       "Reversal \!\(\*StyleBox[\"rev\",FontSlant->\"Italic\"]\)"}, 0., 1.}}, 
+    Typeset`size$$ = {360., {87., 93.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`rev$741614$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`rev$$ = 0.}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`rev$$, $CellContext`rev$741614$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> StreamPlot[
+        Clip[
+         $CellContext`field[$CellContext`x, $CellContext`y, 
+          2, $CellContext`rev$$], {-1., 1.}], {$CellContext`x, -5., 
+         10.}, {$CellContext`y, -5., 5.}, Frame -> None, AspectRatio -> 0.5, 
+        StreamPoints -> Fine, StreamMarkers -> "PinDart"], 
+      "Specifications" :> {{{$CellContext`rev$$, 0., 
+          "Reversal \!\(\*StyleBox[\"rev\",FontSlant->\"Italic\"]\)"}, 0., 
+         1.}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {133., 139.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.700774569645492*^9, 3.70100403635102*^9, 3.716827193518777*^9, 
+   3.739484331125705*^9, {3.739484417627809*^9, 3.739484461790959*^9}, 
+   3.7394855654022903`*^9, 3.739485598259191*^9},
+ CellLabel->"Out[97]=",ExpressionUUID->"860c8820-f57e-4b75-85b8-7cdeda5c6045"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Maximum Penetration Distance of Cosmic Rays in the Atmosphere\
+\>", "Section",
+ CellChangeTimes->{
+  3.716825484342502*^9, {3.7394921124151573`*^9, 3.739492147188484*^9}, {
+   3.739492365989633*^9, 
+   3.7394923661237373`*^9}},ExpressionUUID->"b0c5ea4b-f2f5-4dcc-b37a-\
+015fc85a70a1"],
+
+Cell[TextData[{
+ "When a cosmic ray comes close to the Earth, it is accelerated by the \
+magnetic field and spirals along the field lines. However due to the \
+synchrotron radiation emitted when charged particles are accelerated in a \
+curved ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"path", 
+    SuperscriptBox[",", "7"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "912d2ec8-af13-4d4d-8c95-360684817b59"],
+ " the cosmic rays loose energy and their velocities decrease. The power of \
+synchrotron radiation emitted by a charged particle accelerated in a circular \
+path is given by"
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.739485013942457*^9, 3.739485128778697*^9}, {3.7394852191330357`*^9, 
+  3.7394853542826157`*^9}, {3.73949119462432*^9, 3.739491197906849*^9}, {
+  3.7394921628025618`*^9, 
+  3.7394921656075077`*^9}},ExpressionUUID->"14f64871-5edd-49a5-8208-\
+bc12223b6d30"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "=", 
+    RowBox[{
+     FractionBox["c", 
+      RowBox[{"6", "\[Pi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], 
+     SuperscriptBox["q", "2"], 
+     SuperscriptBox["a", "2"], 
+     SuperscriptBox["\[Gamma]", "4"]}]}], ","}], 
+  TraditionalForm]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.739485403352813*^9, 3.7394854438432827`*^9}},
+ TextAlignment->Center,ExpressionUUID->"ca17f14e-3e03-4b89-967f-f9e64ad8b9aa"],
+
+Cell[TextData[{
+ "where ",
+ StyleBox["P ",
+  FontSlant->"Italic"],
+ "denotes power, ",
+ StyleBox["q",
+  FontSlant->"Italic"],
+ " denotes charge, ",
+ StyleBox["a ",
+  FontSlant->"Italic"],
+ "denotes radial acceleration and ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Epsilon]", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "02e7a106-ea37-4f35-a5aa-5b90707f4587"],
+ " and \[Gamma] have their usual ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"meanings", 
+    SuperscriptBox[".", "8"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c31feb45-46e2-4830-a9f1-95fc01c4301c"],
+ " The power exerted by the magnetic field ",
+ StyleBox["B",
+  FontSlant->"Italic"],
+ " on a charged particle travelling at velocity ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "perpendicular to a field line is given by"
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.739485013942457*^9, 3.739485128778697*^9}, {3.7394852191330357`*^9, 
+  3.7394853542826157`*^9}, {3.739485431380724*^9, 3.739485531126058*^9}, {
+  3.739486140473419*^9, 3.739486143014909*^9}, {3.7394862906256742`*^9, 
+  3.739486339095436*^9}, {3.7394864432357063`*^9, 
+  3.739486530861285*^9}},ExpressionUUID->"3e52970a-ceed-495e-a5df-\
+80dfdd76605a"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "=", 
+    RowBox[{"q", " ", 
+     SuperscriptBox["v", "2"], "B"}]}], ","}], 
+  TraditionalForm]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.739485403352813*^9, 3.7394854438432827`*^9}, {
+   3.7394863761932487`*^9, 3.739486397566428*^9}, 3.739486540997261*^9},
+ TextAlignment->Center,ExpressionUUID->"2e43a993-034b-45a4-97a4-0cbae9f256c4"],
+
+Cell["\<\
+so equating equations (1) and (2), and decomposing \[Gamma] yields the \
+differential equation\
+\>", "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.739485013942457*^9, 3.739485128778697*^9}, {3.7394852191330357`*^9, 
+  3.7394853542826157`*^9}, {3.739485431380724*^9, 3.739485531126058*^9}, {
+  3.739486140473419*^9, 3.739486143014909*^9}, {3.7394862906256742`*^9, 
+  3.739486339095436*^9}, {3.739486406612846*^9, 3.739486409737916*^9}, {
+  3.739486538056457*^9, 3.7394865897391376`*^9}, {3.739486726929563*^9, 
+  3.739486738532692*^9}},ExpressionUUID->"7f14e71d-273a-4669-a77b-\
+9ab4916234e7"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"B", " ", 
+    SuperscriptBox[
+     RowBox[{
+      SuperscriptBox["v", "2"], "(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        SuperscriptBox["v", "2"], 
+        SuperscriptBox["c", "2"]]}], ")"}], "2"]}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"q", " ", "c"}], 
+     RowBox[{"6", "\[Pi]", " ", 
+      SubscriptBox["\[Epsilon]", "0"]}]], 
+    RowBox[{
+     SuperscriptBox[
+      OverscriptBox["v", "."], "2"], "."}]}]}], 
+  TraditionalForm]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.739485403352813*^9, 3.7394854438432827`*^9}, {
+   3.7394863761932487`*^9, 3.739486397566428*^9}, 3.739486540997261*^9, {
+   3.739486901883274*^9, 3.7394870423169537`*^9}},
+ TextAlignment->Center,ExpressionUUID->"684d3e18-bd54-4dad-87ab-9ecf95c4d465"],
+
+Cell[TextData[{
+ StyleBox["DSolve ",
+  FontSlant->"Italic"],
+ "solves for time ",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "where ",
+ StyleBox["v",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "= 0) = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "228f7202-8c10-451d-b783-b47e4c8b124b"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.739485013942457*^9, 3.739485128778697*^9}, {3.7394852191330357`*^9, 
+  3.7394853542826157`*^9}, {3.739485431380724*^9, 3.739485531126058*^9}, {
+  3.739486140473419*^9, 3.739486143014909*^9}, {3.7394862906256742`*^9, 
+  3.739486339095436*^9}, {3.739486406612846*^9, 3.739486409737916*^9}, {
+  3.739486538056457*^9, 3.7394865897391376`*^9}, {3.739486726929563*^9, 
+  3.739486738532692*^9}, {3.739487106962761*^9, 3.739487148848803*^9}, {
+  3.739487264650454*^9, 
+  3.7394873285286617`*^9}},ExpressionUUID->"e7277984-aa1a-49f3-a96f-\
+9f065565c304"],
+
+Cell["Solve equation (3)", "CodeText",
+ CellChangeTimes->{{3.700774601475953*^9, 3.7007746131725473`*^9}, {
+  3.739487158385673*^9, 
+  3.739487168300465*^9}},ExpressionUUID->"234360a6-b53f-4f71-b742-\
+1d648454e97a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{"B", ",", "v", ",", "c", ",", "q", ",", "\[Epsilon]", ",", "t"}], 
+   "]"}], ";", 
+  RowBox[{"Quiet", "@", 
+   RowBox[{
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"B", "*", 
+          SuperscriptBox[
+           RowBox[{"v", "[", "t", "]"}], "2"], "*", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"v", "[", "t", "]"}], "2"], "/", 
+              SuperscriptBox["c", "2"]}]}], ")"}], "2"]}], "\[Equal]", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"q", " ", "c"}], 
+           RowBox[{"6", " ", "\[Pi]", " ", "\[Epsilon]0"}]], "*", 
+          SuperscriptBox[
+           RowBox[{
+            RowBox[{"v", "'"}], "[", "t", "]"}], "2"]}]}], ",", 
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", "v0"}]}], "}"}], ",", 
+      RowBox[{"v", "[", "t", "]"}], ",", "t"}], "]"}], "\[LeftDoubleBracket]",
+     "2", "\[RightDoubleBracket]"}]}]}]], "Input",
+ CellChangeTimes->{{3.739487207421669*^9, 3.739487249488571*^9}, {
+  3.73948734509831*^9, 3.739487403156172*^9}, {3.739487439024517*^9, 
+  3.739487525959046*^9}, {3.739491261099908*^9, 3.739491261744141*^9}, {
+  3.739491323906331*^9, 3.739491329220359*^9}},
+ CellLabel->
+  "In[124]:=",ExpressionUUID->"0c0db977-17b7-4ad8-b725-482bd64bf226"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"v", "[", "t", "]"}], "\[Rule]", 
+   FractionBox[
+    RowBox[{"c", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      FractionBox[
+       RowBox[{
+        SqrtBox["B"], " ", 
+        SqrtBox[
+         RowBox[{"6", " ", "\[Pi]"}]], " ", "t", " ", 
+        SqrtBox["\[Epsilon]0"]}], 
+       RowBox[{
+        SqrtBox["c"], " ", 
+        SqrtBox["q"]}]]], " ", "v0"}], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["c", "2"]}], "+", 
+       SuperscriptBox["v0", "2"]}]], " ", 
+     SqrtBox[
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["c", "2"]}], "+", 
+        SuperscriptBox["v0", "2"], "-", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          FractionBox[
+           RowBox[{"2", " ", 
+            SqrtBox["B"], " ", 
+            SqrtBox[
+             RowBox[{"6", " ", "\[Pi]"}]], " ", "t", " ", 
+            SqrtBox["\[Epsilon]0"]}], 
+           RowBox[{
+            SqrtBox["c"], " ", 
+            SqrtBox["q"]}]]], " ", 
+         SuperscriptBox["v0", "2"]}]}], 
+       RowBox[{
+        SuperscriptBox["c", "2"], "-", 
+        SuperscriptBox["v0", "2"]}]]]}]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.739487444597171*^9, 3.73948752729622*^9}, 
+   3.739491263443038*^9, 3.739491331281884*^9},
+ CellLabel->
+  "Out[124]=",ExpressionUUID->"481bacfd-b8e9-4687-b9b8-f415cf2faef6"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Seeing as ultimately we are interested in comparing ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "for different ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "fef21b4a-0f53-4315-b545-b6ab5add0165"],
+ ", the absolute value of ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "is irrelevant and thus can be simplified to"
+}], "Text",
+ CellChangeTimes->{{3.7007745064072313`*^9, 3.700774524893145*^9}, {
+  3.7394815103384647`*^9, 3.739481561732777*^9}, {3.7394818859315*^9, 
+  3.739481891311452*^9}, {3.739482201062646*^9, 3.739482216264533*^9}, {
+  3.739482317943363*^9, 3.739482466776094*^9}, {3.739482747253311*^9, 
+  3.73948287987265*^9}, {3.739482946333557*^9, 3.739482946434897*^9}, {
+  3.739485013942457*^9, 3.739485128778697*^9}, {3.7394852191330357`*^9, 
+  3.7394853542826157`*^9}, {3.739485431380724*^9, 3.739485531126058*^9}, {
+  3.739486140473419*^9, 3.739486143014909*^9}, {3.7394862906256742`*^9, 
+  3.739486339095436*^9}, {3.739486406612846*^9, 3.739486409737916*^9}, {
+  3.739486538056457*^9, 3.7394865897391376`*^9}, {3.739486726929563*^9, 
+  3.739486738532692*^9}, {3.739487106962761*^9, 3.739487148848803*^9}, {
+  3.739487264650454*^9, 3.7394873285286617`*^9}, {3.739487584497203*^9, 
+  3.739487658810812*^9}},ExpressionUUID->"afd9d1fd-7f90-425e-9126-\
+0031f1dc11f8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"v", "[", 
+   RowBox[{"t_", ",", "v0_", ",", "B_"}], "]"}], ":=", 
+  FractionBox["1", 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"2", " ", 
+        SqrtBox["B"], " ", "t"}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        FractionBox["1", 
+         SuperscriptBox["v0", "2"]]}], ")"}]}]}]]]}]], "Input",
+ CellChangeTimes->{{3.7394876894106417`*^9, 3.739487705960475*^9}},
+ CellLabel->
+  "In[125]:=",ExpressionUUID->"ccafb32e-6f3f-44bb-be4f-86bd89523c4d"],
+
+Cell[TextData[{
+ "Cosmic ray velocities vary from roughly 0.99",
+ StyleBox["c ",
+  FontSlant->"Italic"],
+ "to 0.9999",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ", with most taking velocities closer to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0.99", 
+    RowBox[{"c", 
+     SuperscriptBox[".", "9"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1d347edb-6ff5-4cc6-ad01-b266911911e2"],
+ " The following ",
+ StyleBox["Manipulate",
+  FontSlant->"Italic"],
+ " shows cosmic ray velocity ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "as a function of time for different initial velocities ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "949b212b-7bd9-47f0-bd2c-dbf5977d3586"],
+ " from 0.99",
+ StyleBox["c ",
+  FontSlant->"Italic"],
+ "to 0.9999",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ",",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "and field strength ",
+ StyleBox["B ",
+  FontSlant->"Italic"],
+ "from its current strength to its weakest strength during a reversal."
+}], "Text",
+ CellChangeTimes->{{3.739487812807459*^9, 3.7394878965276814`*^9}, {
+  3.739488005942617*^9, 3.739488085392503*^9}, {3.739488304814156*^9, 
+  3.739488390974732*^9}, {3.739489554509725*^9, 
+  3.73948955484951*^9}},ExpressionUUID->"ec11b358-f62e-42fa-a77c-\
+f77958899f5e"],
+
+Cell[TextData[{
+ "Cosmic ray velocity as a function of time for different initial velocities \
+(0.99",
+ StyleBox["c ",
+  FontSlant->"Italic"],
+ "to 0.9999",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ") and geomagnetic field strength (current to weakest during a reversal)."
+}], "CodeText",
+ CellChangeTimes->{{3.700774601475953*^9, 3.7007746131725473`*^9}, {
+  3.739487158385673*^9, 3.739487168300465*^9}, {3.7394884414960623`*^9, 
+  3.7394885250911922`*^9}},ExpressionUUID->"ba38ca8a-461f-47c4-9beb-\
+a81c9abe3b3a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"v", "[", 
+      RowBox[{"t", ",", "v0", ",", "B"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+     RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<time \!\(\*StyleBox[\"t\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\
+\" \",FontSlant->\"Italic\"]\)(arbitrary units)\>\"", ",", 
+        "\"\<velocity \
+\!\(\*StyleBox[\"v\",FontSlant->\"Italic\"]\)/\!\(\*StyleBox[\"c\",FontSlant->\
+\"Italic\"]\)\>\""}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "v0", ",", ".99", ",", 
+       "\"\<Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)\>\""}], 
+      "}"}], ",", ".99", ",", ".9999"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "B", ",", "1.", ",", 
+       "\"\<Field strength \
+\!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)\>\""}], "}"}], ",", "1.", ",", 
+     "0.1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.739488096623625*^9, 3.739488262788913*^9}, {
+  3.739488534580241*^9, 3.739488584604163*^9}, {3.7394892403740063`*^9, 
+  3.739489240753086*^9}},
+ CellLabel->
+  "In[117]:=",ExpressionUUID->"b1b46dbc-8a34-4595-b18f-f29e787bba79"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`B$$ = 1., $CellContext`v0$$ = 0.99, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v0$$], 0.99, 
+       "Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)"}, 0.99, 
+      0.9999}, {{
+       Hold[$CellContext`B$$], 1., 
+       "Field strength \!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)"}, 1., 
+      0.1}}, Typeset`size$$ = {360., {117., 123.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`v0$856232$$ = 0, $CellContext`B$856233$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`B$$ = 1., $CellContext`v0$$ = 0.99}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`v0$$, $CellContext`v0$856232$$, 0], 
+        Hold[$CellContext`B$$, $CellContext`B$856233$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`v[$CellContext`t, $CellContext`v0$$, $CellContext`B$$], \
+{$CellContext`t, 0, 20}, PlotRange -> {0, 1}, Frame -> True, 
+        FrameLabel -> {
+         "time \!\(\*StyleBox[\"t\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\" \
+\",FontSlant->\"Italic\"]\)(arbitrary units)", 
+          "velocity \
+\!\(\*StyleBox[\"v\",FontSlant->\"Italic\"]\)/\!\(\*StyleBox[\"c\",FontSlant->\
+\"Italic\"]\)"}], 
+      "Specifications" :> {{{$CellContext`v0$$, 0.99, 
+          "Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)"}, 0.99, 
+         0.9999}, {{$CellContext`B$$, 1., 
+          "Field strength \!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)"}, 1.,
+          0.1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {177., 183.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.7394881448016357`*^9, {3.7394881842876873`*^9, 3.739488263737821*^9}, 
+   3.739488586590654*^9, 3.739489241905151*^9},
+ CellLabel->
+  "Out[117]=",ExpressionUUID->"171d1476-1164-491f-a582-64f3b3f9a03c"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Clearly the geomagnetic field provides significant protection from cosmic \
+rays due to their rapid loss of energy, so the particles that reach the Earth\
+\[CloseCurlyQuote]s surface are far less energetic. To obtain a penetration \
+distance into the atmosphere, ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "is integrated with respect to ",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "to yield distance ",
+ StyleBox["d ",
+  FontSlant->"Italic"],
+ "as a function of ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.739488656875392*^9, 3.7394887001364317`*^9}, {
+  3.7394887501433897`*^9, 3.739488886808255*^9}, {3.7394913936055813`*^9, 
+  3.7394914063752337`*^9}},ExpressionUUID->"a352b2a1-de25-4ac3-ae3a-\
+5514de1f8ec4"],
+
+Cell[TextData[{
+ "Integrate ",
+ StyleBox["v ",
+  FontSlant->"Italic"],
+ "to obtain distance ",
+ StyleBox["d",
+  FontSlant->"Italic"],
+ "."
+}], "CodeText",
+ CellChangeTimes->{{3.7007746802427807`*^9, 3.700774696516302*^9}, {
+  3.700774752171883*^9, 3.700774757857513*^9}, {3.7394893088307247`*^9, 
+  3.739489329948243*^9}},ExpressionUUID->"971d4369-2c16-4ef5-a8be-\
+6df0b194c3a9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"d", "[", 
+   RowBox[{"t_", ",", "v0_", ",", "B_"}], "]"}], ":=", 
+  RowBox[{"NIntegrate", "[", 
+   RowBox[{
+    RowBox[{"v", "[", 
+     RowBox[{"tp", ",", "v0", ",", "B"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"tp", ",", "0", ",", "t"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.739488858267809*^9, 3.7394888586147423`*^9}, {
+  3.739488890739575*^9, 3.7394888968042583`*^9}},
+ CellLabel->
+  "In[115]:=",ExpressionUUID->"77ab1abf-87c6-4f9a-b5ab-244276851058"],
+
+Cell[TextData[{
+ "The following ",
+ StyleBox["Manipulate",
+  FontSlant->"Italic"],
+ " shows ",
+ StyleBox["d",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ "), the limit of which is the maximum penetration distance into the \
+atmosphere and is denoted by the dashed red line."
+}], "Text",
+ CellChangeTimes->{{3.7394889269958572`*^9, 3.739489026341749*^9}, {
+  3.7394894569397*^9, 3.7394894593327303`*^9}, {3.739489565569347*^9, 
+  3.739489607037075*^9}},ExpressionUUID->"83f62963-cfb4-4d5c-a628-\
+36662190e300"],
+
+Cell[TextData[{
+ "Distance of cosmic rays as a function of ",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "for different initial velocities (0.99",
+ StyleBox["c ",
+  FontSlant->"Italic"],
+ "to 0.9999",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ") and geomagnetic field strength (current to weakest during a reversal). \
+Maximum penetration distance is defined as the limit of ",
+ StyleBox["d ",
+  FontSlant->"Italic"],
+ "with ",
+ StyleBox["t ",
+  FontSlant->"Italic"],
+ "\[Rule] \[Infinity] and is denoted by the dashed red line."
+}], "CodeText",
+ CellChangeTimes->{{3.7007746802427807`*^9, 3.700774696516302*^9}, {
+  3.700774752171883*^9, 3.700774757857513*^9}, {3.7394893643170424`*^9, 
+  3.739489509837944*^9}},ExpressionUUID->"33904b01-1bef-487f-bfe5-\
+e2a6be7734da"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"d", "[", 
+         RowBox[{"100", ",", "v0", ",", "B"}], "]"}], ",", 
+        RowBox[{"d", "[", 
+         RowBox[{"t", ",", "v0", ",", "B"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "16"}], "}"}]}], ",", 
+      RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+      RowBox[{"FrameLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<time \
+\!\(\*StyleBox[\"t\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\" \",FontSlant->\
+\"Italic\"]\)(arbitrary units)\>\"", ",", 
+         "\"\<distance \
+\!\(\*StyleBox[\"d\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\" \",FontSlant->\
+\"Italic\"]\)(arbitrary units)\>\""}], "}"}]}], ",", 
+      RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Speed\>\""}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Directive", "[", 
+          RowBox[{"Dashed", ",", "Red"}], "]"}], ",", 
+         RowBox[{"RGBColor", "[", 
+          RowBox[{"0.37", ",", "0.51", ",", "0.7"}], "]"}]}], "}"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "v0", ",", ".99", ",", 
+       "\"\<Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)\>\""}], 
+      "}"}], ",", ".99", ",", ".9999"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "B", ",", "1.", ",", 
+       "\"\<Field strength \
+\!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)\>\""}], "}"}], ",", "1.", ",", 
+     "0.1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7394890724599867`*^9, 3.7394890824227667`*^9}, {
+  3.739489128353256*^9, 3.739489182549638*^9}, {3.7394892463691387`*^9, 
+  3.739489269580557*^9}},
+ CellLabel->
+  "In[119]:=",ExpressionUUID->"a3e3016b-a728-4944-9cf4-783a4a7aa372"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`B$$ = 1., $CellContext`v0$$ = 0.99, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v0$$], 0.99, 
+       "Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)"}, 0.99, 
+      0.9999}, {{
+       Hold[$CellContext`B$$], 1., 
+       "Field strength \!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)"}, 1., 
+      0.1}}, Typeset`size$$ = {360., {117., 122.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`v0$877050$$ = 0, $CellContext`B$877051$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`B$$ = 1., $CellContext`v0$$ = 0.99}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`v0$$, $CellContext`v0$877050$$, 0], 
+        Hold[$CellContext`B$$, $CellContext`B$877051$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Plot[{
+          $CellContext`d[100, $CellContext`v0$$, $CellContext`B$$], 
+          $CellContext`d[$CellContext`t, $CellContext`v0$$, \
+$CellContext`B$$]}, {$CellContext`t, 0, 20}, PlotRange -> {0, 16}, Frame -> 
+         True, FrameLabel -> {
+          "time \!\(\*StyleBox[\"t\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\"\
+ \",FontSlant->\"Italic\"]\)(arbitrary units)", 
+           "distance \
+\!\(\*StyleBox[\"d\",FontSlant->\"Italic\"]\)\!\(\*StyleBox[\" \",FontSlant->\
+\"Italic\"]\)(arbitrary units)"}, PerformanceGoal -> "Speed", PlotStyle -> {
+           Directive[Dashed, Red], 
+           RGBColor[0.37, 0.51, 0.7]}]], 
+      "Specifications" :> {{{$CellContext`v0$$, 0.99, 
+          "Initial velocity \
+\!\(\*SubscriptBox[StyleBox[\"v\",FontSlant->\"Italic\"], \"0\"]\)"}, 0.99, 
+         0.9999}, {{$CellContext`B$$, 1., 
+          "Field strength \!\(\*StyleBox[\"B\",FontSlant->\"Italic\"]\)"}, 1.,
+          0.1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {176., 182.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.73948919822191*^9, {3.73948924770763*^9, 3.739489271970684*^9}},
+ CellLabel->
+  "Out[119]=",ExpressionUUID->"ad39c22d-165e-47af-88d2-73d34d3aa3d1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discussion and Conclusion", "Section",
+ CellChangeTimes->{
+  3.716825484342502*^9, {3.739492219098007*^9, 
+   3.7394922254900227`*^9}},ExpressionUUID->"51159fc2-746b-493b-a018-\
+fda2c061dca3"],
+
+Cell[TextData[{
+ "The above ",
+ StyleBox["Manipulate ",
+  FontSlant->"Italic"],
+ "shows that for the majority of cosmic rays (those with a ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c3f3f421-7b1f-4c21-8cc0-870a7ab182fc"],
+ " close to 0.99",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ "), the maximum penetration distance into the atmosphere only increases by a \
+factor of 2 when the field strength is at its lowest, and for high energy \
+cosmic rays the increase is only by a factor of 3. Particles in the solar \
+wind have velocities well below 0.99",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " so their maximum penetration distance increase would be negligible. \
+Therefore is seems that the mass extinctions correlated to geomagnetic \
+reversals are not caused by an increase in cancers ",
+ StyleBox["directly",
+  FontSlant->"Italic"],
+ " due to cosmic ray and solar wind flux increases at the Earth\
+\[CloseCurlyQuote]s surface. Of course, a cosmic ray flux increase of 2 to 3 \
+times could have other effects that threaten life. For example, it has been \
+suggested that cosmic ray flux increase may increase cloud formation which \
+would have a global cooling ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"effect", 
+    SuperscriptBox[".", "10"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "998bb5b6-7653-4a70-8d00-e86f93d53269"],
+ " Also the magnetic field change itself would have several effects, such as \
+disrupting the biological navigation system of birds that is reliant on \
+magnetic field, or reducing the amount of ionised oxygen that is trapped by \
+the magnetic field which would instead evaporate off into ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"space", 
+    SuperscriptBox[".", "6"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5a1c9835-c6fa-4a1d-8f61-924b2b9850b3"],
+ " "
+}], "Text",
+ CellChangeTimes->{{3.73948952312062*^9, 3.7394895332248077`*^9}, {
+  3.739489620280396*^9, 3.739490216257737*^9}, {3.739490275454246*^9, 
+  3.739490320590712*^9}, {3.739490358847629*^9, 3.739490394464348*^9}, {
+  3.7394915038773746`*^9, 3.7394915320838957`*^9}, {3.73949182605934*^9, 
+  3.739491845496593*^9}},ExpressionUUID->"6a971a7a-d68e-4ad1-897c-\
+393b51157e79"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References", "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.700774708350976*^9, 3.700774714085747*^9}, {
+  3.739388406825761*^9, 3.73938842391398*^9}, {3.739491932174281*^9, 
+  3.7394919347498903`*^9}},ExpressionUUID->"3c016e13-47e7-496a-ad48-\
+022008224586"],
+
+Cell["\<\
+1\tMerrill, Ronald T.; McElhinny, Michael W.; McFadden, Phillip L. (1998). \
+The magnetic field of the earth: paleomagnetism, the core, and the deep \
+mantle. Academic Press. ISBN\[NonBreakingSpace]978-0-12-491246-5.\
+\>", "Text",
+ CellChangeTimes->{{3.7393905316166*^9, 
+  3.73939055120621*^9}},ExpressionUUID->"761ac0d7-61a0-4407-b8f9-\
+0fc12d2f9cd7"],
+
+Cell["\<\
+2\tClement, B., 2004. The dependence of geomagnetic polarity reversal \
+durations on site latitude. Nature 428, 637\[Dash]640.\
+\>", "Text",
+ CellChangeTimes->{{3.739390996130474*^9, 
+  3.7393909985548058`*^9}},ExpressionUUID->"fa59da61-f9d1-404a-b703-\
+7439acf5f64a"],
+
+Cell["\<\
+3\tGlassmeier, K.H., Vogt, J., 2010. Magnetic polarity transitions and \
+biospheric effects. Space Sci. Rev. 155, 387\[Dash]410.\
+\>", "Text",
+ CellChangeTimes->{{3.73939678459587*^9, 
+  3.739396786070346*^9}},ExpressionUUID->"8ecf7ff1-c9d4-4bf1-8954-\
+93978d7ed072"],
+
+Cell["\<\
+4\tGlatzmaier, Gary A.; Roberts, Paul H. \[OpenCurlyDoubleQuote]A three \
+dimensional self-consistent computer simulation of a geomagnetic field \
+reversal\[CloseCurlyDoubleQuote]. Nature. 377. pp.\[NonBreakingSpace]203\
+\[Dash]209.\
+\>", "Text",
+ CellChangeTimes->{{3.7394763593351*^9, 
+  3.739476360902997*^9}},ExpressionUUID->"450e0237-f4ff-4d63-8240-\
+e9a03cbdbd00"],
+
+Cell["\<\
+5\tEncrenaz, Th\[EAcute]r\[EGrave]se; Bibring, J.-P.; Blanc, M. (2003). The \
+Solar System. Springer. ISBN\[NonBreakingSpace]3-540-00241-3.\
+\>", "Text",
+ CellChangeTimes->{{3.739476852690887*^9, 
+  3.739476854123994*^9}},ExpressionUUID->"b7f7f30e-a243-4a9e-b9d4-\
+b51cf218356b"],
+
+Cell["\<\
+6\tYong Wei, Zuyin Pu, Qiugang Zong, Weixing Wan, Zhipeng Ren, Markus Fraenz, \
+Eduard Dubinin, Feng Tian, Quanqi Shi, Suiyan Fu, Minghua Hong (2014). Oxygen \
+escape from the Earth during geomagnetic reversals: Implications to mass \
+extinction. Earth and Planetary Science Letters 394 (2014) 94\[Dash]98\
+\>", "Text",
+ CellChangeTimes->{{3.739481789716877*^9, 
+  3.739481867746459*^9}},ExpressionUUID->"e748ddd9-5202-4ce4-b14c-\
+49642f5cfc9f"],
+
+Cell["\<\
+7\tYale Astronomy http://www.astro.yale.edu/vdbosch/astro320_summary27.pdf\
+\>", "Text",
+ CellChangeTimes->{{3.7394852024374228`*^9, 
+  3.739485204397016*^9}},ExpressionUUID->"357806c5-59ef-4d57-bba0-\
+bdcf590d2c06"],
+
+Cell["\<\
+8\tBerkeley University of California, Cosmic Rays and Magnetic Fields Lecture \
+Course, Lecture 9\
+\>", "Text",
+ CellChangeTimes->{{3.739486167222024*^9, 
+  3.7394862267207747`*^9}},ExpressionUUID->"f5463b59-a674-430b-bec7-\
+66347528fa29"],
+
+Cell["\<\
+9\tNave, Carl R. \[OpenCurlyDoubleQuote]Cosmic rays\[CloseCurlyDoubleQuote]. \
+HyperPhysics Concepts. Georgia State University.\
+\>", "Text",
+ CellChangeTimes->{{3.739487985950698*^9, 
+  3.7394879901169024`*^9}},ExpressionUUID->"c2de42ea-204d-4835-9f31-\
+aa3632bc4eb9"],
+
+Cell["\<\
+10\tIkuko Kitaba, Masayuki Hyodo, Takeshi Nakagawa, Shigehiro Katoh, David L. \
+Dettman\[NonBreakingSpace]& Hiroshi Sato (2017). Geological support for the \
+Umbrella Effect as a link between geomagnetic field and climate. Nature, \
+Scientific Reports, volume 7.\
+\>", "Text",
+ CellChangeTimes->{{3.739491671485046*^9, 3.7394917079228163`*^9}, {
+  3.739491797310647*^9, 
+  3.739491818070334*^9}},ExpressionUUID->"fb300e0b-914b-4f84-8de8-\
+2c37014668fa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Further Explorations", "FurtherExplorationSection",
+ CellChangeTimes->{{3.70077612322993*^9, 3.7007761320921593`*^9}, {
+  3.7007787731699142`*^9, 
+  3.70077877480995*^9}},ExpressionUUID->"065557c3-c5af-473a-ad7a-\
+ef4898cca6c4"],
+
+Cell["\<\
+Investigate the other possible links in the causal chain that leads from \
+geomagnetic reversal to mass extinction and attempt to discover the chain \
+itself.\
+\>", "FurtherExploration",
+ CellChangeTimes->{{3.7007765492418337`*^9, 3.7007765636102467`*^9}, {
+   3.705104213701561*^9, 3.7051042224510612`*^9}, {3.7051697227932177`*^9, 
+   3.7051697367862177`*^9}, {3.7056847753333597`*^9, 3.7056847788413363`*^9}, 
+   3.705685608918363*^9, {3.739490402615704*^9, 3.7394904658167543`*^9}, {
+   3.739492247766231*^9, 
+   3.7394922483696337`*^9}},ExpressionUUID->"f40deb6b-59f4-4e65-9bdb-\
+21b11a32efe4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Authorship information", "AuthorshipSection",
+ CellChangeTimes->{{3.705105762145127*^9, 
+  3.7051057665253773`*^9}},ExpressionUUID->"39de0a0c-e019-450e-a306-\
+4e50211f2936"],
+
+Cell["Noah Hardwicke", "Authorship",
+ CellChangeTimes->{{3.7051057700535793`*^9, 3.7051057808261957`*^9}, {
+  3.70568563501264*^9, 3.705685638779039*^9}, {3.739490476802599*^9, 
+  3.739490479038089*^9}},ExpressionUUID->"51af9dab-9fdc-481a-81d4-\
+29c3ada79797"],
+
+Cell["06/30/18", "Authorship",
+ CellChangeTimes->{{3.705105786521521*^9, 3.7051057998362827`*^9}, {
+  3.7056856803452597`*^9, 3.7056856907368*^9}, {3.7266003023293133`*^9, 
+  3.72660030811173*^9}, {3.7394905192045803`*^9, 
+  3.73949052727253*^9}},ExpressionUUID->"62169377-1e94-4414-9cf6-\
+2a34cf98cff0"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{752, 706},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->{},
+CellLabelAutoDelete->False,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Style Environment Names", "Section", ShowGroupOpener -> True, 
+       CellMargins -> {{0, 0}, {10, 30}}, 
+       CellFrameMargins -> {{6, 4}, {6, 8}}, FontColor -> GrayLevel[1], 
+       Background -> RGBColor[0.269902, 0.558434, 0.715618]], 
+      Cell[
+      "Corrected style environment names to use the MenuPosition values from \
+Core.nb. ", "Text"], 
+      Cell[
+       StyleData[All, "Working"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.115343, 0.350561, 0.362966]}, ShowCellLabel -> 
+       True, CellFrameLabelMargins -> 6, ScriptMinSize -> 9, MenuSortingValue -> 
+       1100], 
+      Cell[
+       StyleData[All, "Presentation"], ScreenStyleEnvironment -> 
+       "Presentation", MenuSortingValue -> 1200, Magnification -> 1.25], 
+      Cell[
+       StyleData[All, "Printout"], PageWidth -> PaperWidth, ShowCellBracket -> 
+       True, CellLabelAutoDelete -> False, Hyphenation -> True, 
+       HyphenationOptions -> {"HyphenationMinLengths" -> {3, 4}}, 
+       ScriptMinSize -> 5, MenuSortingValue -> 1500, 
+       PrivateFontOptions -> {"FontType" -> "Outline"}, Magnification -> 0.9], 
+      Cell["Disabled Menu appearance for SlideShow and Condensed", "Text"], 
+      Cell[
+       StyleData[All, "SlideShow"], PageWidth -> WindowWidth, DockedCells -> 
+       FEPrivate`FrontEndResource["FEExpressions", "SlideshowToolbar"], 
+       ScrollingOptions -> {
+        "PagewiseDisplay" -> True, "VerticalScrollRange" -> Fit}, 
+       ShowCellBracket -> False, ShowAutoStyles -> False, ScriptMinSize -> 9, 
+       MenuSortingValue -> 1300, StyleMenuListing -> None]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Notebook Options", "Section", ShowGroupOpener -> True, 
+       CellMargins -> {{0, 0}, {10, 30}}, 
+       CellFrameMargins -> {{6, 4}, {6, 8}}, FontColor -> GrayLevel[1], 
+       Background -> RGBColor[0.269902, 0.558434, 0.715618]], 
+      Cell[
+      "The options defined for the style below will be used at the Notebook \
+level.", "Text"], 
+      Cell[
+       StyleData["Notebook"], PageWidth -> 700, PageHeaders -> {{
+          Cell[
+           TextData[{
+             CounterBox["Page"]}], "PageNumber"], Inherited, 
+          Cell["Author(s)", "Header"]}, {
+          Cell["Article Title", "Header"], Inherited, 
+          Cell[
+           TextData[{
+             CounterBox["Page"]}], "PageNumber"]}}, PageFooters -> {{
+          Cell[
+           TextData[{" ", 
+             StyleBox["volume", FontWeight -> "Bold"], 
+             "\[Copyright] year Wolfram Media, Inc."}], "Footer"], Inherited, 
+          Cell[
+           TextData[{
+             ValueBox["FileName"], " ", 
+             ValueBox["Date"]}], "Footer"]}, {
+          Cell[
+           TextData[{
+             ValueBox["FileName"], " ", 
+             ValueBox["Date"]}], "Footer"], Inherited, 
+          Cell[
+           TextData[{" ", 
+             StyleBox["volume", FontWeight -> "Bold"], 
+             "\[Copyright] year Wolfram Media, Inc."}], "Footer"]}}, 
+       PrintingOptions -> {
+        "FacingPages" -> True, "FirstPageHeader" -> False, 
+         "PageFooterMargins" -> {36, 36}, "PageHeaderMargins" -> {42, 42}, 
+         "PrintRegistrationMarks" -> False, 
+         "PrintingMargins" -> {{90, 90}, {90, 90}}}, CellFrameLabelMargins -> 
+       6, HyphenationOptions -> {
+        "HyphenationCharacter" -> "-", "HyphenationFreeZone" -> 12, 
+         "HyphenationMinLengths" -> {2, 3}}, StyleMenuListing -> None]}, 
+     Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Styles for Title, Chapter and Section Cells", "Section", 
+       ShowGroupOpener -> True, 
+       CellChangeTimes -> {{3.716893051405918*^9, 3.716893056077298*^9}}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Title"], PageWidth -> WindowWidth, ShowCellBracket -> 
+          False, CellMargins -> {{0, 0}, {0, 0}}, 
+          CellBracketOptions -> {"OverlapContent" -> True}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 150}, 
+          CellGroupingRules -> {"TitleGrouping", 0}, PageBreakAbove -> True, 
+          CellFrameMargins -> {{20, 50}, {6, 78}}, TextAlignment -> Left, 
+          LineSpacing -> {1, 4}, LanguageCategory -> "NaturalLanguage", 
+          CounterIncrements -> {"Title"}, 
+          CounterAssignments -> {{"Section", 0}, {"Equation", 0}, {
+            "Figure", 0}, {"Subtitle", 0}, {"Subsubtitle", 0}, {"Item", 0}, {
+            "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+            "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}}, 
+          MenuSortingValue -> 1100, MenuCommandKey -> "1", FontFamily -> 
+          "Source Sans Pro", FontSize -> 44, FontTracking -> -0.8, FontColor -> 
+          RGBColor[255, 255, 255], Background -> 
+          RGBColor[0.71375, 0.20785, 0.17255]], 
+         Cell[
+          StyleData["Title", "SlideShow"], 
+          CellMargins -> {{
+            0.135 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.135 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+            15, 0.12 FrontEnd`AbsoluteCurrentValue[{WindowSize, 2}]}}, 
+          LineSpacing -> {1, 2}, FontSize -> 72, FontColor -> GrayLevel[1]], 
+         Cell[
+          StyleData["Title", "Slideshow Working"], CellFrame -> True, 
+          CellMargins -> {{0, 0}, {0, 150}}, CellFrameMargins -> 
+          Dynamic[{{
+             0.08 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.08 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+             0.0186111 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 
+              0.15 FrontEnd`AbsoluteCurrentValue[{WindowSize, 2}] + 
+              0.1 FrontEnd`AbsoluteCurrentValue[{WindowSize, 2}]}}], 
+          CellFrameColor -> Dynamic[
+            CurrentValue[{StyleHints, "ColorSet", "Display1"}]], 
+          LineSpacing -> {1, 2}, FontSize -> 
+          Dynamic[0.05 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]], 
+          FontColor -> GrayLevel[1], Background :> Dynamic[
+            CurrentValue[{StyleHints, "ColorSet", "Display1"}]]], 
+         Cell[
+          StyleData[
+          "Title", "Slideshow Presentation", StyleDefinitions -> 
+           StyleData["Title", "Slideshow Working"]], CellFrame -> False, 
+          CellMargins -> 
+          Dynamic[{{
+             0.08 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.08 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+             0.0186111 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 
+              0.15 FrontEnd`AbsoluteCurrentValue[{WindowSize, 2}] + 
+              0.1 FrontEnd`AbsoluteCurrentValue[{WindowSize, 2}]}}], 
+          CellFrameMargins -> 0, Background -> None], 
+         Cell[
+          StyleData[
+          "Title", "Scrolling Presentation", StyleDefinitions -> 
+           StyleData["Title", "Slideshow Working"]], CellMargins -> 0, 
+          CellFrameLabels -> {{None, None}, {None, None}}], 
+         Cell[
+          StyleData["Title", "Printout"], 
+          CellMargins -> {{10, Inherited}, {10, 30}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subtitle"], PageWidth -> WindowWidth, ShowCellBracket -> 
+          False, CellMargins -> {{0, 0}, {0, 0}}, 
+          CellBracketOptions -> {"OverlapContent" -> True}, 
+          StyleKeyMapping -> {
+           "Tab" -> "Subsubtitle", "Backspace" -> 
+            "Title", $CellContext`KeyEvent[
+             "Tab", $CellContext`Modifiers -> {$CellContext`Shift}] -> 
+            "Title"}, CellGroupingRules -> {"TitleGrouping", 10}, 
+          CellFrameMargins -> {{20, 50}, {18, 4}}, TextAlignment -> Left, 
+          LanguageCategory -> "NaturalLanguage", CounterIncrements -> 
+          "Subtitle", 
+          CounterAssignments -> {{"Section", 0}, {"Equation", 0}, {
+            "Figure", 0}, {"Subsubtitle", 0}, {"Item", 0}, {"Subitem", 0}, {
+            "Subsubitem", 0}, {"ItemNumbered", 0}, {"SubitemNumbered", 0}, {
+            "SubsubitemNumbered", 0}}, MenuSortingValue -> 1550, FontFamily -> 
+          "Source Sans Pro", FontSize -> 32, FontTracking -> -0.8, FontColor -> 
+          RGBColor[255, 255, 255], Background -> 
+          RGBColor[0.71375, 0.20785, 0.17255]], 
+         Cell[
+          StyleData["Subtitle", "SlideShow"], 
+          CellMargins -> {{
+            0.04 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.04 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {30, 12}}, 
+          LineSpacing -> {1, 2}, FontSize -> 44, FontColor -> 
+          RGBColor[
+           0.9019607843137255, 0.9019607843137255, 0.9019607843137255]], 
+         Cell[
+          StyleData["Subtitle", "Slideshow Working"], CellFrame -> True, 
+          CellMargins -> 0, CellFrameMargins -> 
+          Dynamic[{{
+             0.08 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.08 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+             0.0372 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.02 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}}], 
+          CellFrameColor -> Dynamic[
+            CurrentValue[{StyleHints, "ColorSet", "Display1"}]], 
+          LineSpacing -> {1, 2}, FontSize -> 
+          Dynamic[0.025 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]], 
+          FontColor -> 
+          RGBColor[
+           0.9019607843137255, 0.9019607843137255, 0.9019607843137255], 
+          Background :> Dynamic[
+            CurrentValue[{StyleHints, "ColorSet", "Display1"}]]], 
+         Cell[
+          StyleData[
+          "Subtitle", "Slideshow Presentation", StyleDefinitions -> 
+           StyleData["Subtitle", "Slideshow Working"]], CellFrame -> 0, 
+          CellMargins -> 
+          Dynamic[{{
+             0.08 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.08 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+             0.0372 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.02 
+              FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}}], Background -> 
+          None], 
+         Cell[
+          StyleData[
+          "Subtitle", "Scrolling Presentation", StyleDefinitions -> 
+           StyleData["Subtitle", "Slideshow Working"]]], 
+         Cell[
+          StyleData["Subtitle", "Printout"], 
+          CellMargins -> {{10, Inherited}, {20, 2}}]}, Closed]], 
+      Cell[
+       StyleData["Abstract"], PageWidth -> WindowWidth, ShowCellBracket -> 
+       False, ShowSelection -> True, CellMargins -> {{0, 0}, {0, 0}}, 
+       CellBracketOptions -> {"OverlapContent" -> True}, 
+       CellFrameMargins -> {{20, 40}, {4, 2}}, TextAlignment -> Left, 
+       FontFamily -> "Source Sans Pro", FontSize -> 16, FontSlant -> "Italic",
+        FontColor -> RGBColor[255, 255, 255], Background -> 
+       RGBColor[0.71375, 0.20785, 0.17255]], 
+      Cell[
+       StyleData["AuthorshipIntro"], PageWidth -> WindowWidth, 
+       CellFrame -> {{0, 0}, {8, 0}}, ShowCellBracket -> False, ShowSelection -> 
+       True, CellMargins -> {{0, 0}, {0, 0}}, 
+       CellBracketOptions -> {"OverlapContent" -> True}, 
+       CellFrameMargins -> {{20, 40}, {28, 4}}, CellFrameColor -> 
+       RGBColor[0.988235, 0.403922, 0.0313725], TextAlignment -> Left, 
+       FontFamily -> "Source Sans Pro", FontSize -> 17, FontWeight -> 
+       "SemiBold", FontSlant -> "Plain", FontColor -> RGBColor[255, 255, 255],
+        Background -> RGBColor[0.71375, 0.20785, 0.17255]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Chapter"], ShowCellBracket -> False, 
+          CellMargins -> {{20, 30}, {10, 45}}, 
+          StyleKeyMapping -> {
+           "Tab" -> "Subchapter", "Backspace" -> 
+            "Title", $CellContext`KeyEvent[
+             "Tab", $CellContext`Modifiers -> {$CellContext`Shift}] -> 
+            "Title"}, CellGroupingRules -> {"SectionGrouping", 10}, 
+          PageBreakBelow -> False, LineSpacing -> {1, 4}, LanguageCategory -> 
+          "NaturalLanguage", CounterIncrements -> "Chapter", 
+          CounterAssignments -> {{"Subchapter", 0}, {"Section", 0}, {
+            "Equation", 0}, {"Figure", 0}, {"Subsubtitle", 0}, {"Item", 0}, {
+            "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+            "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}}, 
+          MenuSortingValue -> 1150, MenuCommandKey -> "2", FontFamily -> 
+          "Source Sans Pro", FontSize -> 34, FontTracking -> -0.5, FontColor -> 
+          RGBColor[
+           0.21176470588235294`, 0.21176470588235294`, 0.21176470588235294`]], 
+         Cell[
+          StyleData["Chapter", "Presentation"], 
+          CellMargins -> {{67, Inherited}, {10, 15}}, LineSpacing -> {1, 16}, 
+          FontSize -> 48], 
+         Cell[
+          StyleData["Chapter", "SlideShow"], 
+          CellMargins -> {{
+            0.135 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.04 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {10, 15}}, 
+          LineSpacing -> {1, 2}, FontSize -> 48], 
+         Cell[
+          StyleData["Chapter", "Condensed"], 
+          CellMargins -> {{18, 10}, {5, 7}}, FontSize -> 14], 
+         Cell[
+          StyleData["Chapter", "Printout"], 
+          CellMargins -> {{10, Inherited}, {10, 15}}], 
+         Cell[
+          StyleData["Chapter", "PrintoutGray"], 
+          CellMargins -> {{10, Inherited}, {10, 15}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Section"], CellFrame -> False, ShowCellBracket -> False, 
+          CellMargins -> {{20, 30}, {10, 25}}, Evaluatable -> False, 
+          CellGroupingRules -> {"SectionGrouping", 40}, PageBreakBelow -> 
+          False, CellChangeTimes -> {3.716825484342502*^9}, Hyphenation -> 
+          False, CounterIncrements -> "Section", 
+          CounterAssignments -> {{"Subsection", 0}, {"Subsubsection", 0}, {
+            "ItemNumbered", 0}}, AspectRatioFixed -> True, FontFamily -> 
+          "Source Sans Pro", FontSize -> 28, FontTracking -> -0.5, FontColor -> 
+          RGBColor[0.71375, 0.20785, 0.17255]], 
+         Cell[
+          StyleData["Section", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Section", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Section", "Printout", StyleDefinitions -> None]]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsection"], ShowCellBracket -> False, 
+          CellMargins -> {{20, 30}, {6, 12}}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, PageBreakBelow -> 
+          False, Hyphenation -> False, LineSpacing -> {1, 1}, 
+          CounterIncrements -> "Subsection", 
+          CounterAssignments -> {{"Subsubsection", 0}, {"ItemNumbered", 0}}, 
+          FontFamily -> "Source Sans Pro", FontSize -> 23, 
+          FontTracking -> -0.5, FontColor -> 
+          RGBColor[0.71375, 0.20785, 0.17255]], 
+         Cell[
+          StyleData["Subsection", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Subsection", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Subsection", "Printout", StyleDefinitions -> None]]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsubsection"], ShowCellBracket -> False, 
+          CellMargins -> {{21, 21}, {2, 8}}, 
+          CellGroupingRules -> {"SectionGrouping", 60}, PageBreakBelow -> 
+          False, Hyphenation -> False, LineSpacing -> {1, 1}, 
+          CounterIncrements -> "Subsubsection", 
+          CounterAssignments -> {{"ItemNumbered", 0}}, FontFamily -> 
+          "Source Sans Pro", FontSize -> 18, FontTracking -> -0.5, FontColor -> 
+          RGBColor[0.9254901960784314, 0.49019607843137253`, 0.2]], 
+         Cell[
+          StyleData[
+          "Subsubsection", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Subsubsection", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Subsubsection", "Printout", StyleDefinitions -> None]]}, 
+        Closed]], 
+      Cell[
+       StyleData["FurtherExplorationSection"], 
+       CellFrame -> {{0, 0}, {0, 0.5}}, ShowCellBracket -> False, 
+       CellMargins -> {{20, 30}, {4, 24}}, 
+       CellGroupingRules -> {"SectionGrouping", 30}, 
+       CellFrameMargins -> {{0, 0}, {0, 22}}, CellFrameColor -> 
+       GrayLevel[0.8], DefaultNewCellStyle -> "FurtherExploration", 
+       FontFamily -> "Source Sans Pro", FontSize -> 18, 
+       FontVariations -> {"CapsType" -> "AllCaps"}, FontColor -> 
+       RGBColor[0.2784313725490196, 0.2784313725490196, 0.2784313725490196]], 
+      Cell[
+       StyleData["FurtherExploration", StyleDefinitions -> StyleData["Text"]],
+        ShowCellBracket -> False, CellMargins -> {{20, 10}, {2, 4}}, 
+       FontFamily -> "Source Sans Pro", FontSize -> 16, FontColor -> 
+       RGBColor[0.71375, 0.20785, 0.17255], $CellContext`ReturnCreatesNewCell -> 
+       True], 
+      Cell[
+       StyleData["AuthorshipSection"], ShowCellBracket -> False, 
+       CellMargins -> {{20, Inherited}, {4, 22}}, 
+       CellGroupingRules -> {"SectionGrouping", 30}, DefaultNewCellStyle -> 
+       "FurtherExploration", FontFamily -> "Source Sans Pro", FontSize -> 18, 
+       FontVariations -> {"CapsType" -> "AllCaps"}, FontColor -> 
+       RGBColor[0.2784313725490196, 0.2784313725490196, 0.2784313725490196]], 
+      Cell[
+       StyleData["Authorship", StyleDefinitions -> StyleData["Text"]], 
+       ShowCellBracket -> False, CellMargins -> {{20, 10}, {2, 4}}, 
+       FontFamily -> "Source Sans Pro", FontSize -> 16, FontColor -> 
+       RGBColor[
+        0.4392156862745098, 0.4392156862745098, 
+         0.4392156862745098], $CellContext`ReturnCreatesNewCell -> True]}, 
+     Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Body Text", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Text"], ShowCellBracket -> False, 
+          CellMargins -> {{20, 10}, {6, 8}}, DefaultNewCellStyle -> 
+          "Direction", FontSize -> 15, $CellContext`ReturnCreatesNewCell -> 
+          True, $CellContext`DefaultReturnCreatedCellStyle -> "Direction"], 
+         Cell[
+          StyleData["Text", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Text", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["Text", "Printout", StyleDefinitions -> None], 
+          TextJustification -> 1.]}, Closed]], 
+      Cell[
+       StyleData["CodeText", StyleDefinitions -> StyleData["Text"]], 
+       CellMargins -> {{23, 10}, {3, 8}}, CellFrameLabelMargins -> 4, 
+       MenuSortingValue -> 10000, MenuCommandKey -> "8", FontSize -> 15, 
+       FontWeight -> "Plain", FontColor -> 
+       GrayLevel[0.45], $CellContext`DefaultReturnCreatedCellStyle -> 
+       "Input"]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+      "Styles for Input, Output and Graphics", "Section", ShowGroupOpener -> 
+       True, CellChangeTimes -> {3.7168930720372066`*^9}], 
+      Cell[
+       StyleData["Input"], CellMargins -> {{82, 10}, {5, 6}}, 
+       StyleKeyMapping -> {"=" -> "WolframAlphaShort", "*" -> "Item"}, 
+       AutoNumberFormatting -> False, FontSize -> 13], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InputOnly"], CellMargins -> {{82, 10}, {7, 7}}, FontSize -> 
+          13], 
+         Cell[
+          StyleData["InputOnly", "Presentation"], 
+          CellMargins -> {{100, 10}, {8, 15}}], 
+         Cell[
+          StyleData["InputOnly", "SlideShow"], 
+          CellMargins -> {{100, 10}, {8, 15}}], 
+         Cell[
+          StyleData["InputOnly", "Condensed"], 
+          CellMargins -> {{50, 10}, {2, 3}}], 
+         Cell[
+          StyleData["InputOnly", "Printout"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}], 
+         Cell[
+          StyleData["InputOnly", "PrintoutGray"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}, 
+          LinebreakAdjustments -> {0.85, 2, 10, 1, 1}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Code"]], 
+         Cell[
+          StyleData["Code", "Presentation"], 
+          CellMargins -> {{100, 10}, {8, 15}}], 
+         Cell[
+          StyleData["Code", "SlideShow"], 
+          CellMargins -> {{
+            0.135 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.01 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {8, 15}}, 
+          LinebreakAdjustments -> {1, 2., 12., 1., 1.}, FontSize -> 20], 
+         Cell[
+          StyleData["Code", "Condensed"], CellMargins -> {{50, 10}, {2, 3}}], 
+         Cell[
+          StyleData["Code", "Printout"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["Code", "PrintoutGray"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Output"], CellMargins -> {{82, 10}, {10, 5}}, FontSize -> 
+          13], 
+         Cell[
+          StyleData["Output", "Presentation"], 
+          CellMargins -> {{100, 10}, {15, 8}}], 
+         Cell[
+          StyleData["Output", "SlideShow"], 
+          CellMargins -> {{
+            0.135 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.01 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {15, 8}}, 
+          LinebreakAdjustments -> {1, 2., 12., 1., 1.}, FontSize -> 20], 
+         Cell[
+          StyleData["Output", "Condensed"], 
+          CellMargins -> {{50, Inherited}, {3, 2}}], 
+         Cell[
+          StyleData["Output", "Printout"], 
+          CellMargins -> {{49, Inherited}, {9, 3}}], 
+         Cell[
+          StyleData["Output", "PrintoutGray"], 
+          CellMargins -> {{49, Inherited}, {9, 3}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PlacedGraphics"], CellFrame -> False, ShowCellBracket -> 
+          False, CellMargins -> {{82, 21}, {8, 10}}, CellGroupingRules -> 
+          "GraphicsGrouping", CellHorizontalScrolling -> True, ShowCellLabel -> 
+          False, TextAlignment -> Left, LineSpacing -> {1, 1}, 
+          InsetBoxOptions -> {
+           BaseStyle -> {CellFrame -> None, Background -> None}}], 
+         Cell[
+          StyleData[
+          "PlacedGraphics", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["PlacedGraphics", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["PlacedGraphics", "Printout", StyleDefinitions -> None]]},
+         Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["CellLabel"], LineSpacing -> {1, 1}, AutoNumberFormatting -> 
+          False, FontSize -> 9, FontSlant -> "Oblique"], 
+         Cell[
+          StyleData["CellLabel", "Presentation", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["CellLabel", "SlideShow", StyleDefinitions -> None]], 
+         Cell[
+          StyleData["CellLabel", "Printout", StyleDefinitions -> None]]}, 
+        Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Inline and special formatting", "Section"], 
+      Cell[
+       StyleData["Graphics"], MenuSortingValue -> None], 
+      Cell[
+       StyleData["StandardForm"], 
+       InputAutoReplacements -> {
+        "->" -> "\[Rule]", ":>" -> "\[RuleDelayed]", "<=" -> "\[LessEqual]", 
+         ">=" -> "\[GreaterEqual]", " !=" -> "\[NotEqual]", "==" -> 
+         "\[Equal]", "@>" -> "\\[InlinePart]", "<->" -> "\[UndirectedEdge]", 
+         ParentList}, LineSpacing -> {1.25, 0, 2}, SingleLetterItalics -> 
+       False, StyleMenuListing -> None, FontFamily -> "Source Sans Pro", 
+       PrivateFontOptions -> {"OperatorSubstitution" -> True}], 
+      Cell[
+       StyleData["OutputForm"], PageWidth -> DirectedInfinity[1], 
+       TextAlignment -> Left, LineSpacing -> {0.6, 1}, 
+       AutoQuoteCharacters -> {}, PasteAutoQuoteCharacters -> {}, 
+       StyleMenuListing -> None, FontFamily -> "Source Sans Pro", 
+       PrivateFontOptions -> {"OperatorSubstitution" -> True}], 
+      Cell[
+       StyleData["InputForm"], PageWidth -> DirectedInfinity[1], 
+       InputAutoReplacements -> {}, AllowInlineCells -> False, Hyphenation -> 
+       False, AutoQuoteCharacters -> {}, PasteAutoQuoteCharacters -> {}, 
+       AutoSpacing -> False, NumberMarks -> True, AutoNumberFormatting -> 
+       False, StyleMenuListing -> None, FontFamily -> "Source Sans Pro", 
+       PrivateFontOptions -> {"OperatorSubstitution" -> True}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Link"], FontFamily -> "Source Sans Pro", FontSize :> 
+          If[CurrentValue[
+              EvaluationCell[], "FontFamily"] === "Source Sans Pro", 
+            Inherited, 
+            If[CurrentValue[
+               EvaluationCell[], "FontFamily"] === "WolframCodeSans", 
+             Inherited, Inherited 0.9]], FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData["Link", "Printout"], FontFamily -> "Source Sans Pro", 
+          FontSize :> If[CurrentValue[
+              EvaluationCell[], "FontFamily"] === "Source Sans Pro", 
+            Inherited, 
+            If[CurrentValue[
+               EvaluationCell[], "FontFamily"] === "WolframCodeSans", 
+             Inherited, Inherited 0.88]], FontColor -> GrayLevel[0]]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Hyperlink"], MenuSortingValue -> None, FontColor -> 
+          RGBColor[0.71375, 0.20785, 0.17255]], 
+         Cell[
+          StyleData["Hyperlink", "Printout"]]}, Closed]]}, Closed]]}, Visible -> 
+  False, FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, 2018)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 453, 9, 324, "Title",ExpressionUUID->"a4cacc26-ba4c-40df-8781-0c45e8e1e19d"],
+Cell[1036, 33, 1595, 24, 93, "Abstract",ExpressionUUID->"35286f5c-c0ae-405f-a831-0b12de81f56c"],
+Cell[2634, 59, 302, 7, 62, "AuthorshipIntro",ExpressionUUID->"96e008f1-3bea-4d8e-84cb-f037cd68dd46"],
+Cell[CellGroupData[{
+Cell[2961, 70, 185, 4, 71, "Section",ExpressionUUID->"575e87a4-4d3b-491a-b9c7-5dde22d2425a"],
+Cell[3149, 76, 3357, 59, 172, "Text",ExpressionUUID->"39b14f0a-8481-40b0-9223-104f0edeefaa"],
+Cell[CellGroupData[{
+Cell[6531, 139, 224, 4, 54, "Subsection",ExpressionUUID->"5fcf0f8d-00b3-499e-b52b-4fae79db6a1d"],
+Cell[6758, 145, 419, 12, 34, "Text",ExpressionUUID->"fef50c01-f205-488a-9510-4bc711d7fc2c"],
+Cell[7180, 159, 662, 21, 54, "CodeText",ExpressionUUID->"32b4c4dc-868f-47a3-8305-4254f9f9edd9"],
+Cell[7845, 182, 2565, 85, 149, "Input",ExpressionUUID->"037e89e3-4212-4e7b-9c4f-98c97dcc6ef2"],
+Cell[10413, 269, 802, 19, 57, "Text",ExpressionUUID->"c7524cb0-157b-4ba7-9e88-129b2c6177b6"],
+Cell[11218, 290, 595, 13, 54, "CodeText",ExpressionUUID->"88190f80-bcae-474f-a2c9-72032c353077"],
+Cell[11816, 305, 1394, 44, 100, "Input",ExpressionUUID->"5bf69509-f1c0-41a9-aef8-ef5781232056"],
+Cell[13213, 351, 584, 14, 53, "Text",ExpressionUUID->"a77b9374-4462-4742-910a-57dea5c94829"],
+Cell[13800, 367, 473, 10, 54, "CodeText",ExpressionUUID->"9347f396-aa44-4e36-bd34-e1bf27a80687"],
+Cell[14276, 379, 4429, 151, 301, "Input",ExpressionUUID->"6cb4f173-1f72-4596-85af-1b9650c8c838"],
+Cell[18708, 532, 827, 19, 80, "Text",ExpressionUUID->"277d3cb2-723a-4bec-b50a-109cb8b0a1ec"],
+Cell[19538, 553, 357, 12, 31, "CodeText",ExpressionUUID->"6e6ff036-d0d5-4252-b82e-487b6b103e94"],
+Cell[19898, 567, 1028, 29, 50, "Input",ExpressionUUID->"2d53fc2d-d76c-4c8d-ad4a-71f6f2f7e455"],
+Cell[20929, 598, 763, 17, 57, "Text",ExpressionUUID->"4e4dea66-e0b7-4384-a44d-9e5f9fbd6956"],
+Cell[21695, 617, 495, 9, 54, "CodeText",ExpressionUUID->"75572af2-bcb1-4ca7-a26b-e07262ec8880"],
+Cell[CellGroupData[{
+Cell[22215, 630, 1403, 34, 50, "Input",ExpressionUUID->"5637b20e-b6eb-4cbb-93c6-0b78649f8c96"],
+Cell[23621, 666, 2245, 44, 289, "Output",ExpressionUUID->"860c8820-f57e-4b75-85b8-7cdeda5c6045"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25927, 717, 294, 7, 109, "Section",ExpressionUUID->"b0c5ea4b-f2f5-4dcc-b37a-015fc85a70a1"],
+Cell[26224, 726, 1237, 24, 103, "Text",ExpressionUUID->"14f64871-5edd-49a5-8208-bc12223b6d30"],
+Cell[27464, 752, 478, 13, 42, "DisplayFormulaNumbered",ExpressionUUID->"ca17f14e-3e03-4b89-967f-f9e64ad8b9aa"],
+Cell[27945, 767, 1616, 44, 80, "Text",ExpressionUUID->"3e52970a-ceed-495e-a5df-80dfdd76605a"],
+Cell[29564, 813, 395, 9, 27, "DisplayFormulaNumbered",ExpressionUUID->"2e43a993-034b-45a4-97a4-0cbae9f256c4"],
+Cell[29962, 824, 924, 15, 34, "Text",ExpressionUUID->"7f14e71d-273a-4669-a77b-9ab4916234e7"],
+Cell[30889, 841, 805, 23, 49, "DisplayFormulaNumbered",ExpressionUUID->"684d3e18-bd54-4dad-87ab-9ecf95c4d465"],
+Cell[31697, 866, 1316, 33, 34, "Text",ExpressionUUID->"e7277984-aa1a-49f3-a96f-9f065565c304"],
+Cell[33016, 901, 215, 4, 31, "CodeText",ExpressionUUID->"234360a6-b53f-4f71-b742-1d648454e97a"],
+Cell[CellGroupData[{
+Cell[33256, 909, 1465, 38, 68, "Input",ExpressionUUID->"0c0db977-17b7-4ad8-b725-482bd64bf226"],
+Cell[34724, 949, 1428, 46, 111, "Output",ExpressionUUID->"481bacfd-b8e9-4687-b9b8-f415cf2faef6"]
+}, Open  ]],
+Cell[36167, 998, 1375, 28, 57, "Text",ExpressionUUID->"afd9d1fd-7f90-425e-9126-0031f1dc11f8"],
+Cell[37545, 1028, 588, 18, 72, "Input",ExpressionUUID->"ccafb32e-6f3f-44bb-be4f-86bd89523c4d"],
+Cell[38136, 1048, 1348, 45, 80, "Text",ExpressionUUID->"ec11b358-f62e-42fa-a77c-f77958899f5e"],
+Cell[39487, 1095, 514, 13, 54, "CodeText",ExpressionUUID->"ba38ca8a-461f-47c4-9beb-a81c9abe3b3a"],
+Cell[CellGroupData[{
+Cell[40026, 1112, 1528, 41, 92, "Input",ExpressionUUID->"b1b46dbc-8a34-4595-b18f-f29e787bba79"],
+Cell[41557, 1155, 2774, 56, 377, "Output",ExpressionUUID->"171d1476-1164-491f-a582-64f3b3f9a03c"]
+}, Open  ]],
+Cell[44346, 1214, 768, 21, 80, "Text",ExpressionUUID->"a352b2a1-de25-4ac3-ae3a-5514de1f8ec4"],
+Cell[45117, 1237, 379, 12, 31, "CodeText",ExpressionUUID->"971d4369-2c16-4ef5-a8be-6df0b194c3a9"],
+Cell[45499, 1251, 509, 13, 28, "Input",ExpressionUUID->"77ab1abf-87c6-4f9a-b5ab-244276851058"],
+Cell[46011, 1266, 535, 16, 57, "Text",ExpressionUUID->"83f62963-cfb4-4d5c-a628-36662190e300"],
+Cell[46549, 1284, 766, 22, 77, "CodeText",ExpressionUUID->"33904b01-1bef-487f-bfe5-e2a6be7734da"],
+Cell[CellGroupData[{
+Cell[47340, 1310, 2112, 56, 113, "Input",ExpressionUUID->"a3e3016b-a728-4944-9cf4-783a4a7aa372"],
+Cell[49455, 1368, 2946, 59, 375, "Output",ExpressionUUID->"ad39c22d-165e-47af-88d2-73d34d3aa3d1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52450, 1433, 198, 4, 71, "Section",ExpressionUUID->"51159fc2-746b-493b-a018-fda2c061dca3"],
+Cell[52651, 1439, 2309, 52, 287, "Text",ExpressionUUID->"6a971a7a-d68e-4ad1-897c-393b51157e79"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54997, 1496, 275, 5, 71, "Section",ExpressionUUID->"3c016e13-47e7-496a-ad48-022008224586"],
+Cell[55275, 1503, 363, 7, 57, "Text",ExpressionUUID->"761ac0d7-61a0-4407-b8f9-0fc12d2f9cd7"],
+Cell[55641, 1512, 278, 6, 57, "Text",ExpressionUUID->"fa59da61-f9d1-404a-b703-7439acf5f64a"],
+Cell[55922, 1520, 277, 6, 57, "Text",ExpressionUUID->"8ecf7ff1-c9d4-4bf1-8954-93978d7ed072"],
+Cell[56202, 1528, 380, 8, 57, "Text",ExpressionUUID->"450e0237-f4ff-4d63-8240-e9a03cbdbd00"],
+Cell[56585, 1538, 289, 6, 34, "Text",ExpressionUUID->"b7f7f30e-a243-4a9e-b9d4-b51cf218356b"],
+Cell[56877, 1546, 455, 8, 80, "Text",ExpressionUUID->"e748ddd9-5202-4ce4-b14c-49642f5cfc9f"],
+Cell[57335, 1556, 226, 5, 34, "Text",ExpressionUUID->"357806c5-59ef-4d57-bba0-bdcf590d2c06"],
+Cell[57564, 1563, 249, 6, 34, "Text",ExpressionUUID->"f5463b59-a674-430b-bec7-66347528fa29"],
+Cell[57816, 1571, 279, 6, 34, "Text",ExpressionUUID->"c2de42ea-204d-4835-9f31-aa3632bc4eb9"],
+Cell[58098, 1579, 463, 9, 80, "Text",ExpressionUUID->"fb300e0b-914b-4f84-8de8-2c37014668fa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58598, 1593, 234, 4, 74, "FurtherExplorationSection",ExpressionUUID->"065557c3-c5af-473a-ad7a-ef4898cca6c4"],
+Cell[58835, 1599, 609, 11, 51, "FurtherExploration",ExpressionUUID->"f40deb6b-59f4-4e65-9bdb-21b11a32efe4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59481, 1615, 179, 3, 49, "AuthorshipSection",ExpressionUUID->"39de0a0c-e019-450e-a306-4e50211f2936"],
+Cell[59663, 1620, 260, 4, 27, "Authorship",ExpressionUUID->"51af9dab-9fdc-481a-81d4-29c3ada79797"],
+Cell[59926, 1626, 304, 5, 27, "Authorship",ExpressionUUID->"62169377-1e94-4414-9cf6-2a34cf98cff0"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
